@@ -14,8 +14,9 @@ vim.opt.shiftwidth = 2
 vim.opt.shiftround = true
 vim.opt.expandtab = true
 
+vim.opt.relativenumber = true
+vim.opt.colorcolumn = "80"
 vim.cmd [[ set clipboard+=unnamedplus ]]
-vim.cmd [[ set number relativenumber ]]
 vim.cmd [[ set mouse=a ]]
 vim.cmd [[ set ignorecase ]]
 vim.cmd [[ set smartcase ]]
