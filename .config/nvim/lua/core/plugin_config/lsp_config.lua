@@ -1,6 +1,6 @@
 require("mason").setup()
 require("mason-lspconfig").setup({
-  ensure_installed = { "lua_ls" }
+  ensure_installed = { "lua_ls", "clangd", "html", "cssls", "quick_lint_js", "bashls", "marksman" }
 })
 
 local on_attach = function(_, _)
@@ -14,5 +14,23 @@ local on_attach = function(_, _)
 end
 
 require("lspconfig").lua_ls.setup {
+  on_attach = on_attach
+}
+require("lspconfig").clangd.setup {
+  on_attach = on_attach
+}
+require("lspconfig").html.setup {
+  on_attach = on_attach
+}
+require("lspconfig").cssls.setup {
+  on_attach = on_attach
+}
+require("lspconfig").quick_lint_js.setup {
+  on_attach = on_attach
+}
+require("lspconfig").bashls.setup {
+  on_attach = on_attach
+}
+require("lspconfig").marksman.setup {
   on_attach = on_attach
 }
