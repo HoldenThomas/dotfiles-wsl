@@ -11,7 +11,7 @@ git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME config status.showUntrackedFile
 Install neede programs
 
 ```
-sudo apt install git neovim tmux zsh fzf bc unzip build-essential moreutils mpv
+sudo apt install git neovim tmux zsh fzf bc unzip build-essential moreutils mpv fonts-dejavu-core fonts-font-awesome fonts-noto-cjk
 ```
 
 Install starship
