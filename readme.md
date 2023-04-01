@@ -34,4 +34,9 @@ Change shell to zsh
 chsh -s /usr/bin/zsh && mkdir -p ~/.cache/zsh
 ```
 
+Install lf
+```
+curl -L https://github.com/gokcehan/lf/releases/download/r13/lf-linux-amd64.tar.gz | tar xzC ~/.local/bin
+```
+
 Install a pached font from nerdfonts.com and set as default font for your terminal.
