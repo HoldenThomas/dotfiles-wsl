@@ -70,6 +70,21 @@ c() {
       ls -a
 }
 
+# Use lf to switch directories and bind it to ctrl-o
+lfcd () {
+    tmp="$(mktemp)"
+    lf -last-dir-path="$tmp" "$@"
+    if [ -f "$tmp" ]; then
+        dir="$(cat "$tmp")"
+        rm -f "$tmp" >/dev/null
+        [ -d "$dir" ] && [ "$dir" != "$(pwd)" ] && cd "$dir"
+    fi
+}
+
+bindkey -s '^o' 'lfcd\n'
+bindkey -s '^a' 'bc -lq\n'
+bindkey -s '^f' 'cd "$(dirname "$(fzf)")"\n'
+
 # Change ls colors for making ntfs mounted partitions readable
 LS_COLORS='ow=1;35:'
 export LS_COLORS

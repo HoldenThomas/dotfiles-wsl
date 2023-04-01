@@ -1,0 +1,47 @@
+set icons
+set period 1
+set drawbox
+set hidden
+set ifs "\n"
+set cleaner '~/.config/lf/cleaner'
+set previewer '~/.config/lf/scope'
+
+cmd open ${{
+    case $(file --mime-type "$f" -bL) in
+        *) setsid -f xdg-open "$f" >/dev/null 2>&1 ;;
+    esac
+}}
+
+cmd delete ${{
+	clear; tput cup $(($(tput lines)/3)); tput bold
+	set -f
+	printf "%s\n\t" "$fx"
+	printf "delete?[y/N]"
+	read ans
+	[ $ans = "y" ] && rm -rf $fx
+}}
+
+cmd mkdir $mkdir -p "$(echo $* | tr ' ' '\ ')"
+cmd touch $touch "$(echo $* | tr ' ' '\ ')"
+cmd whoami $whoami
+
+map m
+map md push :mkdir<space>
+map mf push :touch<space>
+map ma $7z a "$f"
+map mx $7z x "$f"
+
+map gb bottom
+map gd cd /mnt
+map gs cd /mnt/d/sync
+map gv cd /mnt/d/sync/videos
+
+map ov $setsid -f mpv -quiet "$f" >/dev/null 2>&1
+map oa $setsid -f $TERMINAL -e mpv "$f" >/dev/null 2>&1
+map op $setsid -f sxivs.sh "$f" >/dev/null 2>&1
+map ob $setsid -f $BROWSER "$f" >/dev/null 2>&1
+
+map B $vidir
+map <c-f> $lf -remote "send $id select '$(fzf)'"
+map D delete
+map b $setbg.sh "$f"
