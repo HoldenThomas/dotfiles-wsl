@@ -21,5 +21,5 @@ chsh -s /usr/bin/zsh && mkdir -p ~/.cache/zsh
 
 Clone tpm for tmux
 ```
-git clone https://github.com/tmux-plugins/tpm ~/.local/src/tmux/plugins/tpm
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ```
