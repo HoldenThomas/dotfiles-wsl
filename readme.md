@@ -9,9 +9,10 @@ git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME config status.showUntrackedFile
 ```
 
 Install neede programs
-
 ```
-sudo apt install git neovim tmux zsh fzf bc unzip build-essential moreutils mpv fonts-dejavu-core fonts-font-awesome fonts-noto-cjk
+sudo add-apt-repository ppa:neovim-ppa/unstable
+sudo apt update
+sudo apt install git neovim tmux zsh fzf bc unzip build-essential moreutils mpv fonts-dejavu-core fonts-font-awesome fonts-noto-cjk nodejs npm
 ```
 
 Install starship
