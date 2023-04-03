@@ -4,7 +4,6 @@ set drawbox
 set hidden
 set ifs "\n"
 set scrolloff 10
-set autoquit on
 
 cmd open ${{
     case $(file --mime-type "$f" -bL) in
