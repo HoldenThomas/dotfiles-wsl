@@ -14,7 +14,7 @@ Needed programs
 ```
 sudo add-apt-repository ppa:neovim-ppa/unstable && sudo apt update
 sudo apt install git build-essential moreutils neovim tmux zsh fzf bc unzip \
-mpv fonts-dejavu-core fonts-font-awesome fonts-noto-cjk nodejs npm
+mpv youtube-dl fonts-dejavu-core fonts-font-awesome fonts-noto-cjk nodejs npm
 curl -sS https://starship.rs/install.sh | sh
 curl -L https://github.com/gokcehan/lf/releases/download/r13/lf-linux-amd64.tar.gz | tar xzC ~/.local/bin
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm

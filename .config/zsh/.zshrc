@@ -24,6 +24,7 @@ alias \
 	C="cd" \
 	g="git" \
 	v="nvim" \
+	nb="newsboat" \
 	config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 # Basic auto/tab complete

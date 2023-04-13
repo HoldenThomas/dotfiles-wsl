@@ -1,0 +1,9 @@
+auto-reload yes
+
+bind-key j down
+bind-key k up
+bind-key h quit
+bind-key l open
+
+browser "setsid -f $BROWSER >/dev/null 2>&1"
+macro v set browser "setsid -f mpv -quiet >/dev/null 2>&1" ; open-in-browser ; set browser "setsid -f $BROWSER >/dev/null 2>&1"

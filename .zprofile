@@ -3,6 +3,8 @@ export PATH="$PATH:${$(find ~/.local/bin -type d -printf %p:)%%:}"
 
 # Default apps
 export EDITOR="nvim"
+export BROWSER="/mnt/c/Users/holden/AppData/Local/BraveSoftware/Brave-Browser/Application/brave.exe"
+export TERMINAL="/mnt/c/Users/holden/AppData/Local/Microsoft/WindowsApps/wt.exe"
 
 # XDG paths
 export XDG_DATA_HOME="$HOME/.local/share"
