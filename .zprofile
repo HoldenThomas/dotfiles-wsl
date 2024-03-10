@@ -18,6 +18,3 @@ export LESSHISTFILE="-"
 export ZDOTDIR="${XDG_CONFIG_HOME:-$HOME/.config}/zsh"
 export HISTFILE="${XDG_DATA_HOME:-$HOME/.local/share}/history"
 export GOPATH="${XDG_DATA_HOME:-$HOME/.local/share}/go"
-
-eval "$(ssh-agent -s)" > /dev/null 2>&1
-ssh-add ~/.ssh/id_rsa_Desktop > /dev/null 2>&1
