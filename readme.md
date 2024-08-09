@@ -5,7 +5,7 @@ Used with WSL 2 Ubuntu.
 Clone dotfiles into home directory using bare repository
 ```
 mkdir ~/.dotfiles
-git clone --bare https://github.com/holdenthomas/dotfiles ~/.dotfiles
+git clone --bare https://github.com/holdenthomas/dotfiles-wsl ~/.dotfiles
 git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME checkout
 git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME config status.showUntrackedFiles no
 ```
